@@ -29,6 +29,9 @@ const Home = () => {
 
     if (results.length + 1 > 10) {
       alert("คุณเดาได้ครบ 10 ครั้งแล้ว \nกรุณาล้างข้อมูลก่อนกรอกใหม่");
+      setResults([]);
+      setInputs(["", "", "", ""]);
+      inputRefs[0].current?.focus();
       return;
     }
 
@@ -76,7 +79,7 @@ const Home = () => {
   return (
     <div className="p-4 max-w-xl mx-auto">
       <div className="font-prompt text-2xl font-bold mb-4 text-center text-white bg-[#77ade9] rounded-2xl p-2">
-        ตรวจคำตอบ
+        มาทายตัวอักษรภาษาอังกฤษ 4 ตัวกันเถอะ
       </div>
 
       <InputBox

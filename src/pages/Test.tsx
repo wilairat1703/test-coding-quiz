@@ -48,6 +48,14 @@ const Test = () => {
       return;
     }
 
+    if (results.length + 1 > 10) {
+      alert("คุณเดาได้ครบ 10 ครั้งแล้ว \nกรุณาล้างข้อมูลก่อนกรอกใหม่");
+      setResults([]);
+      setInputs(["", "", "", ""]);
+      inputRefs[0].current?.focus();
+      return;
+    }
+
     let correctCount = 0;
     let positionCorrect = 0;
     const answerUsed = Array(4).fill(false);
