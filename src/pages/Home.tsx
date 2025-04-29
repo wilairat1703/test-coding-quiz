@@ -28,7 +28,7 @@ const Home = () => {
     }
 
     if (results.length + 1 > 10) {
-      alert("คุณเดาได้ครบ 10 ครั้งแล้ว \nกรุณาล้างข้อมูลก่อนกรอกใหม่");
+      alert("คุณเดาได้ครบ 10 ครั้งแล้ว \nกรุณากรอกใหม่อีกครั้ง");
       setResults([]);
       setInputs(["", "", "", ""]);
       inputRefs[0].current?.focus();
